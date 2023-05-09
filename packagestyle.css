@@ -180,9 +180,17 @@ ul{
     padding-bottom: 20px;
 }
 ul li{
+    display: flex;
     padding: 10px;
     font-size: 17px;
     font-weight: 600;
+}
+h5{
+    font-size: 17px;
+    font-weight: 600;
+}
+.accordion a h5{
+    width: 74%;
 }
 button a{
     color: #fff;
@@ -201,10 +209,11 @@ button{
     text-align: center;
     align-items:center ;
     justify-content: center;
-    bottom: 15px;
+    bottom: 22px;
 }
 .fa-solid{
     padding-right: 10px;
+    padding-top: 5px;
 }
 
 .title p{
@@ -256,32 +265,26 @@ h3 {
   }
   .accordion a {
     position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    display: flex;
     padding: 10px;
     color: #ffffff;
     font-size: 17px;
     font-weight: 600;
   }
   .accordion a::after {
-    top: 7px;
+    top: 15px;
     content: '\002B';
     position: absolute;
     float: right;
-    right:0;
+    right:10px;
+    font-weight: 300;
+    line-height: 17px;
     font-size: 1rem;
     color: #ffffff;
-    padding: 0px 10px;
+    padding: 0px 5.5px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    border-radius: 5px;
+    border-radius: 0px;
     border: 1px solid white;
     text-align: center;
     justify-content: center;
@@ -289,12 +292,14 @@ h3 {
   }
   .accordion a.active::after {
     font-family: 'poppins';
+    padding: 0 7px;
     content: '\002D';
     color: #ffffff;
   }
   .accordion .content {
     opacity: 0;
-    padding: 0 1rem;
+    padding: 0 1rem ;
+    padding-left: 15%;
     max-height: 0;
     overflow: hidden;
     clear: both;
@@ -310,6 +315,7 @@ h3 {
   .accordion .content.active {
     opacity: 1;
     padding: 1rem;
+    padding-left: 15%;
     max-height: 100%;
     -webkit-transition: all 0.35s ease 0.15s;
     -o-transition: all 0.35s ease 0.15s;
